@@ -154,10 +154,8 @@
     <Compile Include="Controllers\GetInitData.cs" />
     <Compile Include="Controllers\GetLiveBroadCast.cs" />
     <Compile Include="Controllers\GetAnchorController.cs" />
-    <Compile Include="Controllers\SendLiveChatMessageController.cs" />
     <Compile Include="Controllers\LiveApiController.cs" />
     <Compile Include="Controllers\LiveReport.cs" />
-    <Compile Include="Controllers\UpdateStaticController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -236,7 +234,6 @@
     <Compile Include="Models\RedisClientConfig.cs" />
     <Compile Include="Models\RedisConfig.cs" />
     <Compile Include="Models\Result.cs" />
-    <Compile Include="Models\RewardGiftInfo.cs" />
     <Compile Include="Models\StaticObject.cs" />
     <Compile Include="Models\StaticTables.cs" />
     <Compile Include="Models\UsersBroadcastLog.cs">
@@ -270,7 +267,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Common\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

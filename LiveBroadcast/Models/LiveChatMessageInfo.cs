@@ -1,4 +1,4 @@
-﻿using LiveBroadcast.Controllers.Common;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,14 +19,14 @@ namespace LiveBroadcast.Models
                 Target = request.Form["Target"] ?? "";
                 GameID = request.Form["GameID"] ?? "";
                 Type = request.Form["Type"] ?? "";
-                ChatMessage = Regex.Replace(ChineseConverter.ToSimplified(request.Form["ChatMessage"] ?? ""), @"[,， \t]+", "");
+                ChatMessage = Regex.Replace(request.Form["ChatMessage"] ?? "", @"[,， \t]+", "");
                 int userGroup = int.TryParse(request.Form["UserGroup"], out userGroup) ? userGroup : -32768;
                 int minSendInterval = int.TryParse(request.Form["MinSendInterval"], out minSendInterval) ? minSendInterval : -32768;
                 MinSendInterval = minSendInterval;
                 UserGroup = userGroup;
                 AllowUserGroups = request.Form["AllowUserGroups"] ?? "";
                 UserName = request.Form["UserName"] ?? "";
-                UserNickName = ChineseConverter.ToSimplified(request.Form["UserNickName"] ?? "");
+                UserNickName = request.Form["UserNickName"] ?? "";
             }
             catch
             { }
